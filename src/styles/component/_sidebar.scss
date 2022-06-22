@@ -27,4 +27,17 @@
       color: #fff;
     }
   }
+  .menu-bottom {
+    padding: 0.5rem 1rem;
+    a.logout-link {
+      text-decoration: none;
+      .menu-icon {
+        margin-right: 1rem;
+      }
+      &:hover,
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
 }
