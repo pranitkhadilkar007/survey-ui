@@ -13,3 +13,7 @@ export function getAuthTokenFromLocal(): LoginResponse | null {
   }
   return null
 }
+
+export function clearLocalStorage() {
+  localStorage.clear()
+}

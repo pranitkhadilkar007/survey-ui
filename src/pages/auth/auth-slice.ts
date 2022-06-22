@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { RootState } from "../../store/store"
 import { post } from "../../http/instanceMethods"
 import {
+  clearLocalStorage,
   getAuthTokenFromLocal,
   setAuthTokenAtLocal,
 } from "../../utils/storage-utils"
@@ -40,6 +41,7 @@ export const slice = createSlice({
         exp: 0,
         accessToken: "",
       }
+      clearLocalStorage()
     },
     setUserData: (state, action: PayloadAction<LoginResponse>) => {
       state.user = getUserDetails(action.payload)
